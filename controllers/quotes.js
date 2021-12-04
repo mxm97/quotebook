@@ -46,8 +46,23 @@ quoteRouter.get('/new', (req, res) => {
 });
 
 // Destroy (DELETE)
+quoteRouter.delete('/:id', (req, res) => {
+    Quote.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/quotes')
+    });
+});
 
 // Update (PUT)
+quoteRouter.put('/:id', (req, res) => {
+    Quote.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true},
+        (error, updatedQuote) => {
+            res.redirect(`/quotes/${req.params.id}`)
+        }
+    )
+});
 
 // Create (POST)
 quoteRouter.post('/', (req, res) => {
@@ -57,6 +72,13 @@ quoteRouter.post('/', (req, res) => {
 });
 
 // Edit
+quoteRouter.get('/:id/edit', (req, res) => {
+    Quote.findById(req.params.id, (error, foundQuote) => {
+        res.render('edit.ejs', {
+            quote: foundQuote,
+        });
+    });
+});
 
 // Show
 quoteRouter.get('/:id', (req, res) => {

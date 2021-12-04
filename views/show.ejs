@@ -12,5 +12,13 @@
     </nav>
     <h2><%= quote.body %></h2>
     <p><%= quote.author %></p>
+    <!--Delete form-->
+    <form action="/quotes/<%= quote.id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete"/>
+    </form>
+    <!--Edit form-->
+    <form action="/quotes/<%= quote.id %>/edit" method="PUT">
+        <input type="submit" value="Edit"/>
+    </form>
 </body>
 </html>
