@@ -11,8 +11,14 @@ const app = express();
 require('dotenv').config();
 
 // Connect to a database
+mongoose.connect(process.env.DATABASE_URL)
 
 // Database connection error/success
+const db = mongoose.connection // shorthand variable
+
+db.on("error", (err) => console.log("Error connecting: " + err.message));
+db.on("connected", () => console.log("mongo connected"));
+db.on("disconnected", () => console.log("mongo disconnected"));
 
 // Mount middleware
 app.use(express.static('public'));

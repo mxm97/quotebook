@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoteBook</title>
+</head>
+<body>
+    <h1>QuoteBook</h1>
+    <h2>Read and write some words of wisdom.</h2>
+    <ul style="list-style: none;">
+        <% quotes.forEach(quote => { %>
+            <li>"<%= quote.body %>"</li>
+            <li> - <%= quote.author %></li>
+        <% }) %>
+    </ul>
+</body>
+</html>

@@ -1,6 +1,7 @@
 // Require dependencies
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Schema = mongoose.Schema; //shorthand variable for mongoose Schema constructor
+
 
 // Define Schema
 const quoteSchema = new Schema(
