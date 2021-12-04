@@ -13,6 +13,9 @@
         <% quotes.forEach(quote => { %>
             <li>"<%= quote.body %>"</li>
             <li> - <%= quote.author %></li>
+            <form action="/quotes/<%= quote._id %>">
+                <input type="submit" value="View">
+            </form>
         <% }) %>
     </ul>
 </body>

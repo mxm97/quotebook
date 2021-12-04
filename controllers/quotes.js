@@ -52,8 +52,10 @@ quoteRouter.get('/', (req, res) => {
 
 // Show
 quoteRouter.get('/:id', (req, res) => {
-    res.send('Hello show page')
-})
+    Quote.findById(req.params.id, (err, quote) => {
+        res.render('show.ejs', { quote });
+    });
+});
 
 // Export router object so we can require it in server.js
 module.exports = quoteRouter;
