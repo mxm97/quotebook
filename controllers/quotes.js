@@ -41,12 +41,20 @@ quoteRouter.get('/', (req, res) => {
 });
 
 // New
+quoteRouter.get('/new', (req, res) => {
+    res.render('new.ejs')
+});
 
 // Destroy (DELETE)
 
 // Update (PUT)
 
 // Create (POST)
+quoteRouter.post('/', (req, res) => {
+    Quote.create(req.body, (error, createdQuote) => {
+        res.redirect('/quotes')
+    });
+});
 
 // Edit
 
