@@ -7,6 +7,10 @@
     <title>QuoteBook</title>
 </head>
 <body>
+    <nav>
+        <a href="/quotes">Return to Homepage</a>
+        <a href="/quotes/new">Add a quote</a>
+    </nav>
     <h1>Edit Quote</h1>
     <form action="/quotes/<%= quote._id%>?_method=PUT" method="POST">
         Body: <input type="text" name="body"/><br />
