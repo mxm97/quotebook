@@ -19,8 +19,8 @@
                 "<%= quote.body %>" 
                 </br>
                 - <%= quote.author %>
-                <form action="/quotes/<%= quote._id %>">
-                    <input type="submit" value="View">
+                <form action="/quotes/<%= quote._id %>" style="margin-top: 10px;">
+                    <input id="indexbutton" type="submit" value="View">
                 </form>
             </div>
         <% }) %>

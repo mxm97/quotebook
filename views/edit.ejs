@@ -15,9 +15,9 @@
     <div class="wrapper">
         <h1>Edit Quote</h1>
         <form class="inputs" action="/quotes/<%= quote._id%>?_method=PUT" method="POST">
-            Body: <br/><textarea type="text" name="body" style="width:90%;"/><%=quote.body%></textarea><br />
-            Author: <br/><input type="text" name="author" value="<%=quote.author%>" style="width:90%;"/><br />
-            <input id="submitbutton" type="submit" name="" value="Submit Changes"/>
+            Body: <br/><textarea type="text" name="body" style="width:97%;"/><%=quote.body%></textarea><br />
+            Author: <br/><input type="text" name="author" value="<%=quote.author%>" style="width:97%;"/><br />
+            <input class="button" type="submit" name="" value="Submit Changes"/>
         </form>
     </div>
 </body>

@@ -2,26 +2,46 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    padding: 10px;
     /* TODO: Fix issue where a very long quote causes index quotes to display oddly*/
-}
-
-#showwrapper {
-    border: 1px solid black;
-    margin: 10px;
 }
 
 #indexquote {
     border: 1px solid black;
+    border-radius: 15px;
     background-color: honeydew;
-    margin: 5px;
+    padding: 10px 20px 20px 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
-#submitbutton {
-    margin-top: 10px;
+#indexbutton {
+    position: absolute;
+    bottom: 4px;
+    left: 45%;
+    background-color: rgb(92, 184, 92);
+    border-radius: 7px;
 }
+
+.showform {
+    display: inline-block;
+}
+
+.button {
+    margin-top: 10px;
+    background-color: rgb(92, 184, 92);
+    border-radius: 7px;
+}   
 
 .wrapper {
-    padding-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    padding-left: -50px;
+    border-radius: 25px;
+    background-color: honeydew;
 }
 
 .inputs {
@@ -37,15 +57,18 @@ body {
 
 h1 {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
     background-color: lightgreen;
     padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav a {
