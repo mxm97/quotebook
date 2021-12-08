@@ -20,6 +20,18 @@ quoteRouter.get('/seed', async (req, res) => {
           body: "If I'm not back in five minutes, just wait longer.",
           author: "Ace Ventura, Pet Detective",
         },
+        {
+            body: "Some people drink from the fountain of knowledge, others just gargle.",
+            author: "Robert Anthony"
+        },
+        {
+            body: "Why do they call it rush hour when nothing moves?",
+            author: "Robin Williams"
+        },
+        {
+            body: "A man is not old until regrets take the place of dreams.",
+            author: "John Barrymore"
+        },
       ];
       await Quote.deleteMany({}); // Can't find notes on what this and line 38 do
       await Quote.create(data);  // Need to figure this out later
