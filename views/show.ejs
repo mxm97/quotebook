@@ -23,6 +23,10 @@
         <form action="/quotes/<%= quote.id %>/edit" method="PUT">
             <input type="submit" value="Edit"/>
         </form>
+        <!--Add to favorites form-->
+        <form action="/quotes/favorites" method="POST">
+            <input type="submit" value="Add to Favorites"/>
+        </form>
     </div>
 </body>
 </html>
