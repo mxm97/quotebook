@@ -52,6 +52,11 @@ quoteRouter.get('/', (req, res) => {
     })
 });
 
+// TODO: Figure out how to properly render favorited quotes only
+quoteRouter.get('/favorites', (req, res) => {
+    res.send('Favorites')
+});
+
 // New
 quoteRouter.get('/new', (req, res) => {
     res.render('new.ejs')
