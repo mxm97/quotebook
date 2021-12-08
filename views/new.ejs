@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>QuoteBook</title>
 </head>
 <body>
     <nav>
         <a href="/quotes">Return to Homepage</a>
     </nav>
-    <h1>New Quote</h1>
-    <form action="/quotes" method="POST">
-        What's on your mind?: <input type="text" name="body"/><br />
-        Author: <input type="text" name="author"/><br />
-        <input type="submit" name="" value="Leave your mark"/>
-    </form>
+    <div class="wrapper">
+        <h1>New Quote</h1>
+        <form class="inputs" action="/quotes" method="POST">
+            What's on your mind?: <br/> <textarea type="text" name="body" style="width:90%;"/></textarea><br />
+            Author: <br/><input type="text" name="author" style="width:90%;"/><br />
+            <input id="submitbutton" type="submit" name="" value="Leave your mark"/>
+        </form>
+    </div>
 </body>
 </html>

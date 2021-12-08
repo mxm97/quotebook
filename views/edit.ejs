@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>QuoteBook</title>
 </head>
 <body>
@@ -11,11 +12,13 @@
         <a href="/quotes">Return to Homepage</a>
         <a href="/quotes/new">Add a quote</a>
     </nav>
-    <h1>Edit Quote</h1>
-    <form action="/quotes/<%= quote._id%>?_method=PUT" method="POST">
-        Body: <input type="text" name="body"/><br />
-        Author: <input type="text" name="author"/><br />
-        <input type="submit" name="" value="Submit Changes"/>
-    </form>
+    <div class="wrapper">
+        <h1>Edit Quote</h1>
+        <form class="inputs" action="/quotes/<%= quote._id%>?_method=PUT" method="POST">
+            Body: <br/><textarea type="text" name="body" style="width:90%;"/><%=quote.body%></textarea><br />
+            Author: <br/><input type="text" name="author" value="<%=quote.author%>" style="width:90%;"/><br />
+            <input id="submitbutton" type="submit" name="" value="Submit Changes"/>
+        </form>
+    </div>
 </body>
 </html>

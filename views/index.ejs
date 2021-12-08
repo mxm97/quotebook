@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
     <title>QuoteBook</title>
 </head>
 <body>
@@ -12,14 +13,17 @@
     </nav>
     <h1>QuoteBook</h1>
     <h2>Read and write some words of wisdom.</h2>
-    <ul style="list-style: none;">
+    <div id="indexwrapper">
         <% quotes.forEach(quote => { %>
-            <li>"<%= quote.body %>"</li>
-            <li> - <%= quote.author %></li>
-            <form action="/quotes/<%= quote._id %>">
-                <input type="submit" value="View">
-            </form>
+            <div id="indexquote">
+                "<%= quote.body %>" 
+                </br>
+                - <%= quote.author %>
+                <form action="/quotes/<%= quote._id %>">
+                    <input type="submit" value="View">
+                </form>
+            </div>
         <% }) %>
-    </ul>
+    </div>
 </body>
 </html>
