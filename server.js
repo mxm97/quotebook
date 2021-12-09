@@ -11,7 +11,10 @@ const app = express();
 require('dotenv').config();
 
 // Connect to a database
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 // Database connection error/success
 const db = mongoose.connection // shorthand variable
