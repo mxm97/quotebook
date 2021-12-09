@@ -7,21 +7,40 @@
 }
 
 #indexquote {
+    transition: 0.3s;
+}
+
+#indexquote {
     border: 1px solid black;
     border-radius: 15px;
-    background-color: honeydew;
+    background-color: #f5f4f4;
     padding: 10px 20px 20px 20px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
+    box-shadow: 1px 1px 0 rgba(0,0,0,.25);;
+}
+
+#indexquote:hover {
+    box-shadow: 4px 4px 0 rgba(0,0,0,.25);;
+}
+
+#indexbutton {
+    transition: 0.3s;
 }
 
 #indexbutton {
     position: absolute;
     bottom: 4px;
     left: 45%;
-    background-color: rgb(92, 184, 92);
+    background-color: lightgreen;
     border-radius: 7px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#indexbutton:hover {
+    opacity: 0.7;
 }
 
 .showform {
@@ -29,10 +48,20 @@
 }
 
 .button {
+    transition: 0.3s;
+}
+
+.button {
     margin-top: 10px;
-    background-color: rgb(92, 184, 92);
+    background-color: lightgreen;
     border-radius: 7px;
+    cursor: pointer;
+    opacity: 1;
 }   
+
+.button:hover {
+    opacity: 0.7;
+}
 
 .wrapper {
     padding-top: 5px;
@@ -41,16 +70,17 @@
     margin: 10px;
     padding-left: -50px;
     border-radius: 25px;
-    background-color: honeydew;
+    background-color: #f5f4f4;
 }
 
 .inputs {
     padding-left: 5px;
     margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: rgb(141, 152, 163);
+    background-color: rgb(250, 241, 232);
     margin:0;
     padding:0;
 }
@@ -58,11 +88,13 @@ body {
 h1 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: #404040;
 }
 
 h2 {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: #404040;
 }
 
 nav {
@@ -73,7 +105,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: slateblue;
+    color: #404040;
     margin-right: 40px;
 }
 
