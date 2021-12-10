@@ -58,7 +58,6 @@ quoteRouter.get('/', (req, res) => {
     })
 });
 
-// TODO: Figure out how to render favorited quotes only
 quoteRouter.get('/favorites', (req, res) => {
     Quote.find({}, (error, favoriteQuotes) => {
         res.render('favorites.ejs', {
