@@ -18,14 +18,16 @@
     <h1>Favorite Quotes</h1>
     <div id="indexwrapper">
         <% quotes.forEach(quote => { %>
+            <% if (quote.favorited === true) { %>
             <div id="indexquote">
                 "<%= quote.body %>" 
                 </br>
                 - <%= quote.author %>
-                <form action="/quotes/<%= quote._id %>" style="margin-top: 10px;">
-                    <input id="indexbutton" type="submit" value="View">
+                <form action="/quotes/<%= quote._id %>?_method=PUT" method="POST" style="margin-top: 10px;">
+                    <input id="indexbutton" type="submit" value="Remove from Favorites">
                 </form>
             </div>
+            <% } %>
         <% }) %>
     </div>
 </body>
