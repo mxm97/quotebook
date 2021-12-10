@@ -8,6 +8,7 @@ const quoteSchema = new Schema(
     {
         body: String,
         author: String,
+        favorited: Boolean,
     },
     {timestamps: true}
 );

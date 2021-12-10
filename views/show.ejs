@@ -27,7 +27,8 @@
             <input class="button" type="submit" value="Edit"/>
         </form>
         <!--Add to favorites form-->
-        <form class="showform" action="/quotes/favorites" method="POST">
+        <form class="showform" action="/quotes/<%= quote._id %>?_method=PUT" method="POST">
+            <% quote.favorited === true %>
             <input class="button" type="submit" value="Add to Favorites"/>
         </form>
     </div>
