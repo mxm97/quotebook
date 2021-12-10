@@ -3,7 +3,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     padding: 10px;
-    /* TODO: Fix issue where a very long quote causes index quotes to display oddly*/
 }
 
 #indexquote {
@@ -19,6 +18,11 @@
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     position: relative;
     box-shadow: 1px 1px 0 rgba(0,0,0,.25);;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    max-height: 120px;
+    /* TODO: Fix issue where text overflows vertically past the View button*/
 }
 
 #indexquote:hover {
