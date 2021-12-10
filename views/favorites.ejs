@@ -23,7 +23,7 @@
                 "<%= quote.body %>" 
                 </br>
                 - <%= quote.author %>
-                <form action="/quotes/<%= quote._id %>?_method=PUT" method="POST" style="margin-top: 10px;">
+                <form action="/quotes/favorites/<%= quote._id %>?_method=PUT" method="POST" style="margin-top: 10px;">
                     <input id="indexbutton" type="submit" value="Remove from Favorites">
                 </form>
             </div>

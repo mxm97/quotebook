@@ -79,6 +79,25 @@ quoteRouter.delete('/:id', (req, res) => {
     });
 });
 
+// Remove from Favorites route
+quoteRouter.put('/favorites/:id', (req, res) => {
+
+    if(req.body.favorited === 'on') {
+        req.body.favorited = true
+    } else {
+        req.body.favorited = false;
+    };
+
+    Quote.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true},
+        (error, updatedQuote) => {
+            res.redirect(`/quotes/favorites`)
+        }
+    )
+});
+
 // Update (PUT)
 quoteRouter.put('/:id', (req, res) => {
 
@@ -95,7 +114,7 @@ quoteRouter.put('/:id', (req, res) => {
         req.body,
         {new: true},
         (error, updatedQuote) => {
-            res.redirect(`/quotes/favorites`)
+            res.redirect(`/quotes`)
         }
     )
 });
