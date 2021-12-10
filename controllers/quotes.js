@@ -11,26 +11,32 @@ quoteRouter.get('/seed', async (req, res) => {
         {
           body: "I've had a lot of worries in my life, most of which never happened.",
           author: "Mark Twain",
+          favorited: true,
         },
         {
           body: "Does it disturb anyone else that 'The Los Angeles Angels' baseball team translates directly to 'The The Angels Angels'?",
           author: "Neil DeGrasse Tyson",
+          favorited: true,
         },
         {
           body: "If I'm not back in five minutes, just wait longer.",
           author: "Ace Ventura, Pet Detective",
+          favorited: false,
         },
         {
             body: "Some people drink from the fountain of knowledge, others just gargle.",
-            author: "Robert Anthony"
+            author: "Robert Anthony",
+            favorited: false,
         },
         {
             body: "Why do they call it rush hour when nothing moves?",
-            author: "Robin Williams"
+            author: "Robin Williams",
+            favorited: false,
         },
         {
             body: "A man is not old until regrets take the place of dreams.",
-            author: "John Barrymore"
+            author: "John Barrymore",
+            favorited: false,
         },
       ];
       await Quote.deleteMany({}); // Can't find notes on what this and line 38 do
@@ -75,18 +81,30 @@ quoteRouter.delete('/:id', (req, res) => {
 
 // Update (PUT)
 quoteRouter.put('/:id', (req, res) => {
+
+    console.log(req.body)
+
+    if(req.body.favorited === 'on') {
+        req.body.favorited = true
+    } else {
+        req.body.favorited = false;
+    };
+
     Quote.findByIdAndUpdate(
         req.params.id,
         req.body,
         {new: true},
         (error, updatedQuote) => {
-            res.redirect(`/quotes/${req.params.id}`)
+            res.redirect(`/quotes/favorites`)
         }
     )
 });
 
 // Create (POST)
 quoteRouter.post('/', (req, res) => {
+
+    req.body.favorited = !!req.body.favorited;
+
     Quote.create(req.body, (error, createdQuote) => {
         res.redirect('/quotes')
     });
