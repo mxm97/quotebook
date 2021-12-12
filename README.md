@@ -18,6 +18,8 @@ A simple web app for writing and reading quotes.
 
 # Getting Started
 [Click Here](https://quotebook-34161.herokuapp.com/quotes) to see the site live.
+- Users can view, create, edit, and delete quotes.
+- Users can also add and remove quotes to and from a "Favorites" collection.
 
 ## Future Enhancements
 - Ability to search quotes by category
