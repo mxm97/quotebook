@@ -27,12 +27,16 @@
     <div id="indexwrapper">
         <% quotes.forEach(quote => { %>
             <div id="indexquote">
-                "<%= quote.body %>" 
-                </br>
-                - <%= quote.author %>
-                <form action="/quotes/<%= quote._id %>" style="margin-top: 10px;">
-                    <input id="indexbutton" type="submit" value="View">
-                </form>
+                <div>
+                    "<%= quote.body %>" 
+                    </br>
+                    - <%= quote.author %>
+                </div>
+                <div>
+                    <form action="/quotes/<%= quote._id %>" style="margin-top: 10px;">
+                        <input id="indexbutton" type="submit" value="View">
+                    </form>
+                </div>
             </div>
         <% }) %>
     </div>
