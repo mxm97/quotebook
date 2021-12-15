@@ -38,6 +38,36 @@ quoteRouter.get('/seed', async (req, res) => {
             author: "John Barrymore",
             favorited: false,
         },
+        {
+            body: "Economics is a subject that does not greatly respect one’s wishes.",
+            author: "Nikita Khrushchev",
+            favorited: false,
+        },
+        {
+            body: "For once you have tasted flight you will walk the earth with your eyes turned skywards, for there you have been and there you will long to return.",
+            author: "Leonardo da Vinci",
+            favorited: false,
+        },
+        {
+            body: "The good thing about computers is that they do what you tell them to do. The bad news is that they do what you tell them to do.",
+            author: "Ted Nelson",
+            favorited: true,
+        },
+        {
+            body: "Writing means sharing. It’s part of the human condition to want to share things – thoughts, ideas, opinions.",
+            author: "Paulo Coelho",
+            favorited: true,
+        },
+        {
+            body: "Money, if it does not bring you happiness, will at least help you be miserable in comfort.",
+            author: "Helen Gurley Brown",
+            favorited: true,
+        },
+        {
+            body: "If you owe the bank $100 that’s your problem. If you owe the bank $100 million, that’s the bank’s problem.",
+            author: "J. Paul Getty",
+            favorited: true,
+        },
       ];
       await Quote.deleteMany({}); // Can't find notes on what this and line 38 do
       await Quote.create(data);  // Need to figure this out later
